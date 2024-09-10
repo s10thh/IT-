@@ -33,7 +33,7 @@ export function logout() {
 // 管理员登录
 export function adminlogin(data) {
   return request({
-    url: '/admin/login',
+    url: '/adminlogin',
     method: 'post',
     data
   })

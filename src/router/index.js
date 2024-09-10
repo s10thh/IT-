@@ -22,6 +22,13 @@ const routes = [
     component: () => import("@/views/auth/Login"),
     meta: { title: "登录" },
   },
+  // 管理员登录
+  {
+    name: "adminlogin",
+    path: "/adminlogin",
+    component: () => import("@/views/auth/adminLogin"),
+    meta: { title: "管理员登录" },
+  },
   // 发布
   {
     name: "post-create",
@@ -90,9 +97,9 @@ const originalPush = VueRouter.prototype.push;
 VueRouter.prototype.push = function push(location) {
   return originalPush.call(this, location).catch((err) => err);
 };
-
+//创建路由实例
 const router = new VueRouter({
   routes,
 });
-
+//导出路由实例
 export default router;

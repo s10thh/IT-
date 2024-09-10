@@ -36,7 +36,7 @@ Vue.use(ElementUI);
 Vue.config.productionTip = false
 
 new Vue({
-  router,
+  router,//挂载路由
   store,
   render: h => h(App)
 }).$mount('#app')
